@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margen_arriba_layout"
@@ -17,20 +18,65 @@
         app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
         app:boxBackgroundMode="outline">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tilNombre"
+                android:id="@+id/tietNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margen_arriba_layout"
                 android:orientation="horizontal"
                 android:clickable="true"
                 android:focusable="true"
-                android:hint="Nombre completo"/>
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/name_hint"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/lyDataPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            android:layout_gravity="center"
+            android:text="@string/btn_set_date"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+            app:boxBackgroundMode="outline"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margen_arriba_layout"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1"
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/fecha_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/lyTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:clickable="true"
         android:focusable="true">
         <com.google.android.material.textfield.TextInputLayout
@@ -43,14 +89,20 @@
             app:boxCornerRadiusBottomStart="@dimen/corner_radius"
             app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
             app:boxBackgroundMode="outline">
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margen_arriba_layout"
                 android:orientation="horizontal"
-                android:clickable="true"
+                android:inputType="date"
                 android:focusable="true"
-                android:hint="Teléfono"/>
+                android:clickable="true"
+                android:maxLines="1"
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/phone_hint"/>
+
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
@@ -72,14 +124,17 @@
             app:boxCornerRadiusBottomStart="@dimen/corner_radius"
             app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
             app:boxBackgroundMode="outline">
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margen_arriba_layout"
-                android:orientation="horizontal"
                 android:clickable="true"
                 android:focusable="true"
-                android:hint="Email"/>
+                android:hint="@string/email_hint"
+                android:orientation="horizontal"
+                android:textColorHint="@color/sugestedHint" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -101,13 +156,24 @@
             app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
             app:boxBackgroundMode="outline">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietDescripcionContacto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margen_arriba_layout"
                 android:orientation="horizontal"
                 android:clickable="true"
                 android:focusable="true"
-                android:hint="Descripción Contacto"/>
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/description_hint"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_siguiente"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_marginTop="@dimen/margen_arriba_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/text_button_siguiente"/>
 </LinearLayout>
