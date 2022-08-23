@@ -1,9 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfirmarDatos">
+    tools:context=".ConfirmarDatos"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombreConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_arriba_layout"
+        app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+        app:boxCornerRadiusTopStart="@dimen/corner_radius"
+        app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+        app:boxBackgroundMode="outline">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tietNombreConfirmarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColorHint="@color/sugestedHint"
+            android:hint="@string/name_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/lyFechaConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFechaConfirmarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+            app:boxBackgroundMode="outline"
+            android:layout_gravity="center">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietFechaConfirmarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margen_arriba_layout"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="false"
+                android:maxLines="1"
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/fecha_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lyTelefonoConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="false"
+        android:focusable="false">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTelefonoConfirmarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietTelefonoConfirmarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_arriba_layout"
+                android:orientation="horizontal"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="false"
+                android:maxLines="1"
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/phone_hint"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyEmailConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="false"
+        android:focusable="false">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailConfirmarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietEmailConfirmarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_arriba_layout"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="@string/email_hint"
+                android:orientation="horizontal"
+                android:textColorHint="@color/sugestedHint" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyDescricionContactoConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="false"
+        android:focusable="false">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescricionContactoConfirmarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen_arriba_layout"
+            app:boxCornerRadiusTopEnd="@dimen/corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/corner_radius"
+            app:boxCornerRadiusBottomEnd="@dimen/corner_radius"
+            app:boxBackgroundMode="outline">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tietDescripcionContactoConfirmarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margen_arriba_layout"
+                android:orientation="horizontal"
+                android:clickable="false"
+                android:focusable="false"
+                android:textColorHint="@color/sugestedHint"
+                android:hint="@string/description_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_editarConfirmarDatos"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_marginTop="@dimen/margen_arriba_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/text_button_editar_datos"/>
+</LinearLayout>

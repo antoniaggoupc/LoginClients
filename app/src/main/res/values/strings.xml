@@ -7,8 +7,11 @@
     <string name="description_hint">Descripción Contacto</string>
     <string name="btn_set_date">Set Date</string>
     <string name="text_button_siguiente">Siguiente</string>
+    <string name="text_button_editar_datos">Editar Datos</string>
     <string name="pnombre">Nombre</string>
     <string name="pfecha">Fecha</string>
     <string name="ptelefono">Telefono</string>
     <string name="pemail">Email</string>
+    <string name="pdescripcion">Descripcion</string>
+    <string name="mensaje">Debes rellenar todos los campos</string>
 </resources>
